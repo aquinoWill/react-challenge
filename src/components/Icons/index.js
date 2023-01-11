@@ -1,17 +1,19 @@
 import React from 'react'
-import { object, string, objectOf } from 'prop-types'
+import { string, objectOf } from 'prop-types'
 
-export const Icons = ({ name, ...props }) => {
-  const Component = name
-  return Component ? <Component role='img' {...props} /> : <></>
-}
+import * as Icons from 'assets'
 
-Icons.propTypes = {
-  name: object,
+export const Icon = ({ name, alt }) => (
+  <img src={Icons[name]} alt={alt} />
+)
+
+Icon.propTypes = {
+  alt: string,
+  name: string.isRequired,
   props: objectOf(string)
 }
 
-Icons.defaultProps = {
-  props: {},
-  name: <div />
+Icon.defaultProps = {
+  alt: '',
+  props: {}
 }
