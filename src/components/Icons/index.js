@@ -1,5 +1,5 @@
 import React from 'react'
-import { string, objectOf } from 'prop-types'
+import { string } from 'prop-types'
 
 import * as Icons from 'assets'
 
@@ -9,11 +9,9 @@ export const Icon = ({ name, alt }) => (
 
 Icon.propTypes = {
   alt: string,
-  name: string.isRequired,
-  props: objectOf(string)
+  name: string.isRequired
 }
 
 Icon.defaultProps = {
-  alt: '',
-  props: {}
+  alt: ''
 }

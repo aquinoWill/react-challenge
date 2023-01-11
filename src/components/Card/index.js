@@ -14,14 +14,8 @@ export const Card = ({ title, subTitle, icon }) => {
   )
 }
 
-Card.defaultProps = {
-  title: '',
-  subTitle: '',
-  icon: ''
-}
-
 Card.propTypes = {
-  title: string,
-  subTitle: string,
-  icon: string
+  title: string.isRequired,
+  subTitle: string.isRequired,
+  icon: string.isRequired
 }

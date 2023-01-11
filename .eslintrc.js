@@ -35,7 +35,7 @@ module.exports = {
       }
     }
   },
-  ignorePatterns: ['serviceWorker.js', 'node_modules/'],
+  ignorePatterns: ['serviceWorker.js', 'node_modules/', '*.spec.js'],
   rules: {
     'camelcase': 'off',
     'linebreak-style': 0,
