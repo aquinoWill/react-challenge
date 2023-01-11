@@ -58,6 +58,7 @@
       "!<rootDir>/node_modules/",
       "!src/**/*.styled.js",
       "!src/pages/index.js",
+      "!src/assets/index.js",
       "!src/App.js",
       "!src/index.js",
       "!src/routes/index.js",

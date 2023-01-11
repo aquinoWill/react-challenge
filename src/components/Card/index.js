@@ -1,12 +1,21 @@
 import React from 'react'
-import { Icons } from 'components'
-import { ReactComponent as ConnectError } from 'assets/icons/arrows.svg'
+import { string } from 'prop-types'
 
-export const Card = () => {
+import { Icon } from 'components'
+import { Wrapper, Title, SubTitle } from './Card.styled'
+
+export const Card = ({ title, subTitle, icon }) => {
   return (
-    <div>
-      <h2>Card</h2>
-      <Icons name={ConnectError} />
-    </div>
+    <Wrapper>
+      <Icon name={icon} alt={`Icon name ${icon}`} />
+      <Title>{title}</Title>
+      <SubTitle>{subTitle}</SubTitle>
+    </Wrapper>
   )
+}
+
+Card.propTypes = {
+  title: string.isRequired,
+  subTitle: string.isRequired,
+  icon: string.isRequired
 }

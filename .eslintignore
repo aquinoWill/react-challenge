@@ -1,6 +1,5 @@
 node_modules
 public
-test/
 protractor.conf.js
 src/global.styled.js
 src/reportWebVitals.js
