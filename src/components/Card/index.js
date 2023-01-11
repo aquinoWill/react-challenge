@@ -4,7 +4,8 @@ import { ReactComponent as ConnectError } from 'assets/icons/arrows.svg'
 
 export const Card = () => {
   return (
-    <div>card
+    <div>
+      <h2>Card</h2>
       <Icons name={ConnectError} />
     </div>
   )

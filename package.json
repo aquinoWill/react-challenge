@@ -60,6 +60,7 @@
       "!src/pages/index.js",
       "!src/App.js",
       "!src/index.js",
+      "!src/routes/index.js",
       "!src/components/index.js"
     ],
     "coverageThreshold": {
