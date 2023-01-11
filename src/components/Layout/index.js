@@ -8,6 +8,10 @@ export const Layout = ({ children }) => (
   </Wrapper>
 )
 
+Layout.defaultProps = {
+  children: <></>
+}
+
 Layout.propTypes = {
-  children: node.isRequired
+  children: node
 }

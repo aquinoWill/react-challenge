@@ -1,12 +1,8 @@
 import React from 'react'
-import { Layout } from 'components'
-import { GlobalStyles } from './global.styled'
+import { Router } from 'routes'
 
 const App = () => (
-  <>
-  <GlobalStyles />
-  <Layout />
-  </>
+  <Router />
 )
 
 export default App
