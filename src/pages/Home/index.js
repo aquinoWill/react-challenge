@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { Card, Icon, MultiSelect } from 'components'
 import { arrows } from 'assets'
 import { googleData, mailchimpData } from 'utils/constants'
-import { Wrapper, Description, IconsWrapper, Title, SubTitle } from './Home.styled'
+import { Wrapper, CenterPage, Description, IconsWrapper, Title, SubTitle } from './Home.styled'
 
 export const Home = () => {
   const [syncContacts, setSyncContacts] = useState(true)
@@ -22,24 +22,26 @@ export const Home = () => {
 
   return (
     <Wrapper>
-      <Card>
-        <Icon name='google' alt='Icon google' />
-        <Title>Gmail</Title>
-        <SubTitle>These Gmail contacts will sync to MailChimp</SubTitle>
-        <MultiSelect options={googleData} />
-      </Card>
-      <IconsWrapper onClick={() => setSyncContacts(!syncContacts)}>
-        <img ref={syncRef} src={arrows} alt='Sync Contacts' />
-        <Description>
-          { syncContacts ? 'Sync Contacts' : 'All done!' }
-        </Description>
-      </IconsWrapper>
-      <Card>
-        <Icon name='mailchimp' alt='Icon mailchimp' />
-        <Title>Mailchimp</Title>
-        <SubTitle>These Mailchimp contacts will sync to Gmail</SubTitle>
-        <MultiSelect options={mailchimpData} />
-      </Card>
+      <CenterPage>
+        <Card>
+          <Icon name='google' alt='Icon google' />
+          <Title>Gmail</Title>
+          <SubTitle>These Gmail contacts will sync to MailChimp</SubTitle>
+          <MultiSelect options={googleData} />
+        </Card>
+        <IconsWrapper onClick={() => setSyncContacts(!syncContacts)}>
+          <img ref={syncRef} src={arrows} alt='Sync Contacts' />
+          <Description>
+            { syncContacts ? 'Sync Contacts' : 'All done!' }
+          </Description>
+        </IconsWrapper>
+        <Card>
+          <Icon name='mailchimp' alt='Icon mailchimp' />
+          <Title>Mailchimp</Title>
+          <SubTitle>These Mailchimp contacts will sync to Gmail</SubTitle>
+          <MultiSelect options={mailchimpData} />
+        </Card>
+      </CenterPage>
     </Wrapper>
   )
 }
