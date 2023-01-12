@@ -13,8 +13,10 @@ export const Wrapper = styled.div`
 
 export const DropdownWrapper = styled.div`
   width: 100%;
+  cursor: pointer;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
   justify-content: space-between;
 `
 
@@ -29,12 +31,13 @@ export const ListItensWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
+  opacity: 0;
+  height: 0;
 `
 
 export const List = styled.ul`
   width: 100%;
-  max-height: 82px;
+  min-height: 82px;
   list-style: none;
   overflow-y: overlay;
 
