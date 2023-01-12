@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { gsap } from 'gsap'
-import { Card } from 'components'
+import { Card, Icon, MultiSelect } from 'components'
 import { arrows } from 'assets'
-import { Wrapper, Description, IconsWrapper } from './Home.styled'
+import { googleData, mailchimpData } from 'utils/constants'
+import { Wrapper, Description, IconsWrapper, Title, SubTitle } from './Home.styled'
 
 export const Home = () => {
-  const [syncArrows, setSyncArrows] = useState(true)
+  const [syncContacts, setSyncContacts] = useState(true)
   const syncRef = useRef(null)
   const tween = useRef(null)
 
@@ -17,26 +18,28 @@ export const Home = () => {
 
   useEffect(() => {
     tween.current.reversed(!tween.current.reversed())
-  }, [syncArrows])
+  }, [syncContacts])
 
   return (
     <Wrapper>
-      <Card
-        title='Gmail'
-        icon='google'
-        subTitle='These Gmail contacts will sync to MailChimp'
-      />
-      <IconsWrapper onClick={() => setSyncArrows(!syncArrows)}>
+      <Card>
+        <Icon name='google' alt='Icon google' />
+        <Title>Gmail</Title>
+        <SubTitle>These Gmail contacts will sync to MailChimp</SubTitle>
+        <MultiSelect options={googleData} />
+      </Card>
+      <IconsWrapper onClick={() => setSyncContacts(!syncContacts)}>
         <img ref={syncRef} src={arrows} alt='Sync Contacts' />
         <Description>
-          { syncArrows ? 'Sync Contacts' : 'All done!' }
+          { syncContacts ? 'Sync Contacts' : 'All done!' }
         </Description>
       </IconsWrapper>
-      <Card
-        title='Mailchimp'
-        icon='mailship'
-        subTitle='These Mailchimp contacts will sync to Gmail'
-      />
+      <Card>
+        <Icon name='mailchimp' alt='Icon mailchimp' />
+        <Title>Mailchimp</Title>
+        <SubTitle>These Mailchimp contacts will sync to Gmail</SubTitle>
+        <MultiSelect options={mailchimpData} />
+      </Card>
     </Wrapper>
   )
 }
