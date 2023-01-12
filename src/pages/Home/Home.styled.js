@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
   width: 100%;
   height: 100%;
   background-image: url(${Blog});
-  background-position: center 8rem;
+  background-position: center 6rem;
   background-repeat: no-repeat;
 `
 
@@ -14,7 +14,7 @@ export const CenterPage = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 16.4rem;
+  margin-top: 12rem;
 `
 
 export const IconsWrapper = styled.div`
