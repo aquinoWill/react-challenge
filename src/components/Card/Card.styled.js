@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   border-radius: 2px;
   padding: 33px;
 
-  & img {
+  & > img {
     background-color: #FFFFFF;
     border: 1px solid #D1DBE6;
     border-radius: 100px;

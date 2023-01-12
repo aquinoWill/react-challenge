@@ -16,7 +16,9 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "@testing-library/react-hooks": "^8.0.1",
     "@testing-library/user-event": "^13.5.0",
+    "gsap": "^3.11.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.2",
@@ -56,11 +58,12 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!<rootDir>/node_modules/",
-      "!src/**/*.styled.js",
-      "!src/pages/index.js",
-      "!src/assets/index.js",
       "!src/App.js",
       "!src/index.js",
+      "!src/**/*.styled.js",
+      "!src/assets/index.js",
+      "!src/pages/index.js",
+      "!src/hooks/index.js",
       "!src/routes/index.js",
       "!src/components/index.js"
     ],
