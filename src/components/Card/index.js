@@ -7,8 +7,8 @@ import { Wrapper, Title, SubTitle } from './Card.styled'
 export const Card = ({ title, subTitle, icon }) => {
   const data = [
     { label: 'Family', value: 'family' },
-    { label: 'Work Friends', value: 'work friends' },
-    { label: 'anather label', value: 'another label' }
+    { label: 'Work Friends', value: 'work_friends', checked: true },
+    { label: 'another label', value: 'another_label' }
   ]
   return (
     <Wrapper>

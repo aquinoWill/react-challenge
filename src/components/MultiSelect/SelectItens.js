@@ -5,7 +5,6 @@ import { Item, Label, Checkbox } from './MultiSelect.styled'
 
 export const SelectItens = () => {
   const { data: { options } } = useMultiSelect()
-  console.log('DATA', options)
 
   return (
     <Item>
@@ -15,11 +14,11 @@ export const SelectItens = () => {
             { option.label }
             <Checkbox
               type='checkbox'
-              name='contact'
+              name={option.value}
               value={option.value}
+              defaultChecked={option.checked}
             />
           </Label>
-
         ))
       }
     </Item>
