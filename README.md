@@ -1,4 +1,4 @@
-# Trio Challenge - Willian Aquino
+# React Challenge - Willian Aquino
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
